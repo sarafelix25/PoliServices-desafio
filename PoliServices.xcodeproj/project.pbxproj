@@ -62,18 +62,66 @@
 		4C55034329379F3600699589 /* PoliServices */ = {
 			isa = PBXGroup;
 			children = (
-				4C55034429379F3600699589 /* AppDelegate.swift */,
-				4C55034629379F3600699589 /* SceneDelegate.swift */,
-				4C55034829379F3600699589 /* ViewController.swift */,
-				4C55034A29379F3600699589 /* Main.storyboard */,
-				4C30F0A729391842002C3068 /* SelectDateViewController.swift */,
 				4C55034D29379F3900699589 /* Assets.xcassets */,
-				4C55034F29379F3900699589 /* LaunchScreen.storyboard */,
+				9BF0A81029958E4700838405 /* Delegate */,
 				4C55035229379F3900699589 /* Info.plist */,
-				4C5503582937D32A00699589 /* NovoServicoViewController.swift */,
-				4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */,
+				4C55034F29379F3900699589 /* LaunchScreen.storyboard */,
+				4C55034A29379F3600699589 /* Main.storyboard */,
+				9BF0A80B2995811400838405 /* Model */,
+				9BF0A80E29958DC900838405 /* Service */,
+				9BF0A80C2995811F00838405 /* View */,
+				9BF0A80D29958DC000838405 /* ViewModel */,
 			);
 			path = PoliServices;
+			sourceTree = "<group>";
+		};
+		9BF0A80B2995811400838405 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BF0A80C2995811F00838405 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BF0A80F29958E3A00838405 /* Cell */,
+				4C55034829379F3600699589 /* ViewController.swift */,
+				4C5503582937D32A00699589 /* NovoServicoViewController.swift */,
+				4C30F0A729391842002C3068 /* SelectDateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BF0A80D29958DC000838405 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9BF0A80E29958DC900838405 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9BF0A80F29958E3A00838405 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4C30F0A529390FC6002C3068 /* ServiceCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9BF0A81029958E4700838405 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				4C55034429379F3600699589 /* AppDelegate.swift */,
+				4C55034629379F3600699589 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,7 +359,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +393,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
