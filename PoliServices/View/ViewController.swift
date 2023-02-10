@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.removeObject(forKey: "service_name")
         }
 
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.2) {
             self.lastServiceView.alpha = hasService ? 1 : 0
             self.lastServiceView.isHidden = !hasService
             self.novoBtn.alpha = hasService ? 0 : 1

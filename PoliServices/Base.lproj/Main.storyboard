@@ -83,7 +83,7 @@ DevServices</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxi-aM-JxQ">
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nxi-aM-JxQ">
                                                 <rect key="frame" x="0.0" y="123.66666666666663" width="331" height="142"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d9z-8b-Fkj">
@@ -332,7 +332,6 @@ DevServices</string>
                     <connections>
                         <outlet property="datePicker" destination="CiD-6M-sC8" id="H4g-R4-YOt"/>
                         <outlet property="salvar" destination="LeN-Q2-61q" id="tyk-K9-so3"/>
-                        <outlet property="salvarBtn" destination="LeN-Q2-61q" id="K5h-Bh-pAR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vye-0B-tCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
