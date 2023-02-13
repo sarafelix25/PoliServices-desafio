@@ -9,8 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    private lazy var titleLabel: UILabel = {
-
-        return title
-    }()
+//    private lazy var titleLabel: UILabel = {
+//
+//        return title
+//    }()
 }
