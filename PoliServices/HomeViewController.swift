@@ -67,19 +67,20 @@ class HomeViewController: UIViewController {
         return sobreDescricaoLabel
     }()
 
-//    private lazy var line: UILabel = {
-//
-//    }()
+    private lazy var line: UIView = {
+        let line = UIView()
+        line.translatesAutoresizingMaskIntoConstraints = false
+        line.backgroundColor = .systemIndigo
+        return line
+    }()
 
     private lazy var button: UIButton = {
-        let button = UIButton()
+        let button = UIButton(configuration: .tinted())
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Solicitar novo serviço", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
-        button.backgroundColor = .systemGray5
         button.clipsToBounds = true
-        button.layer.cornerRadius = 16
+        button.layer.cornerRadius = 20
         return button
     }()
 
@@ -88,6 +89,7 @@ class HomeViewController: UIViewController {
         view.addSubview(dateLabel)
         view.addSubview(button)
         view.addSubview(sobreStackView)
+        view.addSubview(line)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -102,10 +104,15 @@ class HomeViewController: UIViewController {
             sobreStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
             sobreStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
-            button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            button.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            line.topAnchor.constraint(equalTo: sobreStackView.bottomAnchor, constant: 32),
+            line.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
+            line.heightAnchor.constraint(equalToConstant: 1),
+            line.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+            button.topAnchor.constraint(equalTo: line.bottomAnchor, constant: 32),
+            button.heightAnchor.constraint(equalToConstant: 42),
+            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
     }
 }
