@@ -94,7 +94,7 @@ class HomeViewController: UIViewController {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
 
             dateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             dateLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),

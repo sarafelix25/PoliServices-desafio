@@ -16,7 +16,7 @@
 		4C55035129379F3900699589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C55034F29379F3900699589 /* LaunchScreen.storyboard */; };
 		4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5503582937D32A00699589 /* NovoServicoViewController.swift */; };
 		9BF0A8122996859300838405 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0A8112996859300838405 /* HomeViewController.swift */; };
-		9BF0A81429968C6E00838405 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0A81329968C6E00838405 /* DetailsViewController.swift */; };
+		9BF0A81429968C6E00838405 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF0A81329968C6E00838405 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		4C55035229379F3900699589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C5503582937D32A00699589 /* NovoServicoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoServicoViewController.swift; sourceTree = "<group>"; };
 		9BF0A8112996859300838405 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9BF0A81329968C6E00838405 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		9BF0A81329968C6E00838405 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 				9BF0A80C2995811F00838405 /* View */,
 				9BF0A80D29958DC000838405 /* ViewModel */,
 				9BF0A8112996859300838405 /* HomeViewController.swift */,
-				9BF0A81329968C6E00838405 /* DetailsViewController.swift */,
+				9BF0A81329968C6E00838405 /* DetailViewController.swift */,
 			);
 			path = PoliServices;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				4C30F0A829391842002C3068 /* SelectDateViewController.swift in Sources */,
 				4C30F0A629390FC6002C3068 /* ServiceCollectionViewCell.swift in Sources */,
 				4C55034929379F3600699589 /* ViewController.swift in Sources */,
-				9BF0A81429968C6E00838405 /* DetailsViewController.swift in Sources */,
+				9BF0A81429968C6E00838405 /* DetailViewController.swift in Sources */,
 				4C55034529379F3600699589 /* AppDelegate.swift in Sources */,
 				4C5503592937D32A00699589 /* NovoServicoViewController.swift in Sources */,
 				9BF0A8122996859300838405 /* HomeViewController.swift in Sources */,
@@ -351,7 +351,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Poli Services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -385,7 +384,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Poli Services";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
