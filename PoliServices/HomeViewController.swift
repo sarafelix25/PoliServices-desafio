@@ -56,13 +56,13 @@ class HomeViewController: UIViewController {
     }()
 
     private lazy var descriptionLabel: UILabel = {
-        let descriptionLabel = UILabel()
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.text = "A DevServices é o melhor aplicativo para reservar seu agendamento com serviços. Aqui é um espaço que você consegue reservar um espaço na minha agenda e vamos resolver suas dúvidas.\nSelecione o tipo de atendimento e vamos pra cima!\n\n*Ilustrativo"
-        descriptionLabel.textColor = .black
-        descriptionLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        descriptionLabel.numberOfLines = 0
-        return descriptionLabel
+        let description = UILabel()
+        description.translatesAutoresizingMaskIntoConstraints = false
+        description.text = "A DevServices é o melhor aplicativo para reservar seu agendamento com serviços. Aqui é um espaço que você consegue reservar um espaço na minha agenda e vamos resolver suas dúvidas.\nSelecione o tipo de atendimento e vamos pra cima!\n\n*Ilustrativo"
+        description.textColor = .black
+        description.font = .systemFont(ofSize: 14, weight: .regular)
+        description.numberOfLines = 0
+        return description
     }()
 
     private lazy var cardView: UIView = {
