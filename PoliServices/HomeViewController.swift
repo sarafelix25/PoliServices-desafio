@@ -33,38 +33,44 @@ class HomeViewController: UIViewController {
         return dateLabel
     }()
 
-    private lazy var sobreStackView: UIStackView = {
-        let sobreStackView = UIStackView(arrangedSubviews: [sobreTitleLabel, sobreDescricaoLabel])
-        sobreStackView.translatesAutoresizingMaskIntoConstraints = false
-        sobreStackView.alignment = .fill
-        sobreStackView.axis = .vertical
-        sobreStackView.contentMode = .scaleAspectFill
-        sobreStackView.distribution = .fillProportionally
-        sobreStackView.clipsToBounds = true
-        sobreStackView.autoresizesSubviews = true
-        sobreStackView.layer.cornerRadius = 8
-        sobreStackView.backgroundColor = .white
-        return sobreStackView
+    private lazy var stackView: UIStackView = {
+        let  stackView = UIStackView(arrangedSubviews: [titleDescription, descriptionLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.contentMode = .scaleAspectFill
+        stackView.distribution = .fillProportionally
+        stackView.clipsToBounds = true
+        stackView.autoresizesSubviews = true
+        return stackView
     }()
 
-    private lazy var sobreTitleLabel: UILabel = {
-        let sobreTitleLabel = UILabel()
-        sobreTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        sobreTitleLabel.text = "Sobre nós"
-        sobreTitleLabel.textColor = .black
-        sobreTitleLabel.font = .systemFont(ofSize: 16, weight: .bold)
-        sobreTitleLabel.numberOfLines = 0
-        return sobreTitleLabel
+    private lazy var titleDescription: UILabel = {
+        let titleDescription = UILabel()
+        titleDescription.translatesAutoresizingMaskIntoConstraints = false
+        titleDescription.text = "Sobre nós"
+        titleDescription.textColor = .black
+        titleDescription.font = .systemFont(ofSize: 16, weight: .bold)
+        titleDescription.numberOfLines = 0
+        return titleDescription
     }()
 
-    private lazy var sobreDescricaoLabel: UILabel = {
-        let sobreDescricaoLabel = UILabel()
-        sobreDescricaoLabel.translatesAutoresizingMaskIntoConstraints = false
-        sobreDescricaoLabel.text = "A DevServices é o melhor aplicativo para reservar seu agendamento com serviços. Aqui é um espaço que você consegue reservar um espaço na minha agenda e vamos resolver suas dúvidas.\nSelecione o tipo de atendimento e vamos pra cima!\n\n*Ilustrativo"
-        sobreDescricaoLabel.textColor = .black
-        sobreDescricaoLabel.font = .systemFont(ofSize: 14, weight: .regular)
-        sobreDescricaoLabel.numberOfLines = 0
-        return sobreDescricaoLabel
+    private lazy var descriptionLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.text = "A DevServices é o melhor aplicativo para reservar seu agendamento com serviços. Aqui é um espaço que você consegue reservar um espaço na minha agenda e vamos resolver suas dúvidas.\nSelecione o tipo de atendimento e vamos pra cima!\n\n*Ilustrativo"
+        descriptionLabel.textColor = .black
+        descriptionLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        descriptionLabel.numberOfLines = 0
+        return descriptionLabel
+    }()
+
+    private lazy var cardView: UIView = {
+        let cardView = UIView()
+        cardView.translatesAutoresizingMaskIntoConstraints = false
+        cardView.backgroundColor = .white
+        cardView.layer.cornerRadius = 8
+        return cardView
     }()
 
     private lazy var line: UIView = {
@@ -88,7 +94,8 @@ class HomeViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(dateLabel)
         view.addSubview(button)
-        view.addSubview(sobreStackView)
+        view.addSubview(cardView)
+        cardView.addSubview(stackView)
         view.addSubview(line)
 
         NSLayoutConstraint.activate([
@@ -99,12 +106,17 @@ class HomeViewController: UIViewController {
             dateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             dateLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
 
-            sobreStackView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 32),
-            sobreStackView.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor, constant: 32),
-            sobreStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            sobreStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 32),
+            cardView.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor, constant: 16),
+            cardView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:  -32),
+            cardView.heightAnchor.constraint(equalToConstant: 200),
 
-            line.topAnchor.constraint(equalTo: sobreStackView.bottomAnchor, constant: 32),
+            stackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -10),
+            stackView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor),
+
+            line.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 32),
             line.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 55),
             line.heightAnchor.constraint(equalToConstant: 1),
             line.centerXAnchor.constraint(equalTo: view.centerXAnchor),
